@@ -43,7 +43,7 @@ section {
 }
 
 html {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Microsoft YaHei, sans-serif;
   /*谷歌浏览器字体最小字体12px*/
   -webkit-text-size-adjust: 100%;/*100%/none 关闭字体大小自动调整功能*/
   /*a标签及拥有 :active伪类的元素有默认的高亮框*/
@@ -51,6 +51,7 @@ html {
 }
 
 body {
+  font-family: Microsoft YaHei, sans-serif; 
   /*开启moblie网页快速滚动和回弹的效果*/
   -webkit-overflow-scrolling: touch;
 }
@@ -60,6 +61,9 @@ body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, d
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+span, a, h1, h2, h3, h4, h5, h6, input, textarea {
+  color: #333333;
+}
 em,
 i {
   font-style: normal;
@@ -86,6 +90,20 @@ input, textarea {
   border: none;
 }
 
+input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  color: #323233;
+  line-height: inherit;
+  text-align: left;
+  background-color: transparent;
+  border: 0;
+  resize: none;
+}
 /* 网页点击完链接去掉下划线 */
 a:hover,
 a:focus {

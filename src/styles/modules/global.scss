@@ -24,3 +24,37 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
+// 基础通用布局 外边距
+.mg-c-lrauto {
+  margin: 0 auto;
+}
+
+.mg-c-lr15 {
+  margin-left: double(30px);
+  margin-right: double(30px);
+}
+
+.mg-c-t15 {
+  margin-top: double(30px);
+}
+
+.mg-c-b15 {
+  margin-bottom: double(30px);
+}
+
+.mg-c-tb15 {
+  margin-top: double(30px);
+  margin-bottom: double(30px);
+}
+
+// 基础通用布局 内边距
+.pd-c-lr15 {
+  padding-left: double(30px);
+  padding-right: double(30px);
+}
+
+.pd-c-tb15 {
+  padding-left: double(30px);
+  padding-right: double(30px);
+}

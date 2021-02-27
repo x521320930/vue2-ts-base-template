@@ -1,9 +1,140 @@
 @import '~@/styles/modules/mixin.scss';
 
+$layout-w: double(690px);
+
 .pension-calculator-page {
   min-height: 100%;
-}
 
+  .form-container {
+    width: $layout-w;
+    padding-top: double(455px);
+    border-bottom-left-radius: double(10px);
+    border-bottom-right-radius: double(10px);
+  }
+  // 选项卡
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    .tabs-items {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: double(335px);
+      height: double(88px);
+      background-color: rgba(255, 255, 255, .8);
+      border-top-right-radius: double(10px);
+      border-top-left-radius: double(10px);
+      .tabs-items-icon {
+        width: double(54px);
+        height: double(54px);
+      }
+      .tabs-items-text {
+        .text {
+          margin-left: double(18px);
+          font-size: double(30px);
+          font-weight: 400;
+          color: #333333;
+        }
+      }
+      &.active {
+        background-color: #fff;
+        .text {
+          color: #1579D8;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  // 表单
+  .form {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    overflow: hidden;
+    .form-items {
+      display: flex;
+    }
+    .form-items-col {
+      width: double(290px);
+    }
+
+    .form-submit {
+      width: double(630px);
+      border-radius: double(40px);
+      .btn-text {
+        color: #BF150B;
+        font-weight: bold;
+      }
+    }
+    
+    .form-items-label {
+      display: flex;
+      align-items: center;
+      height: double(40px);
+      line-height: double(40px);
+      span {  
+        font-size: double(26px);
+      }
+      .icon {
+        margin-left: double(10px);
+      }
+    }
+    .form-items-rules {
+      text-align: center;
+      width: 100%;
+      .text {
+        font-size: double(28px);
+        font-weight: 400;
+        color: #1579D8;
+      }
+    }
+
+    .form-items-input {
+      margin-top: double(20px);
+      display: flex;
+      align-items: center;
+      height: double(66px);
+      border: 2px solid #D1D1D1;
+      background-color: #fff;
+      border-radius: double(4px);
+      input {
+        padding-left: double(23px);
+        font-size: double(24px);
+        &::placeholder {
+          color: #C4C4C4;
+        }
+      }
+      .select {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: double(44px);
+        height: inherit;
+        background-color: #F4F4F4;
+        border-left: 2px solid #C0C0C0;
+        border-right: 0;
+      }
+    }
+    .form-items-jc-sb {
+      justify-content: space-between;
+    }
+    .form-items-jc-cr {
+      justify-content: center;
+    }
+  }
+  
+  // 推荐
+  .recommend-container {
+    width: $layout-w;
+    margin-top: double(30px);
+    .recommend-items {
+      width: 100%;
+      height: double(220px);
+    }
+  }
+  
+}
 
 .base-map-bg {
   background-image: url('~@/assets/images/pension-calculator/base-map-bg.jpg');
@@ -12,6 +143,4 @@
   background-size: cover;
 }
 
-.form-container {
-  padding-top: double(455px);
-}
+

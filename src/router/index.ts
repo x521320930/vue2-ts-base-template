@@ -14,6 +14,12 @@ const routes: Array<RouteConfig> = [
     name: '养老金计算器',
     meta: { title: '养老金计算器', isTitle: true },
     component: () => import(/* webpackChunkName: "pension-calculator" */ '../views/pension-calculator/index.vue')
+  },
+  {
+    path: '/calculator-results',
+    name: '计算结果',
+    meta: { title: '计算结果', isTitle: true },
+    component: () => import(/* webpackChunkName: "calculator-results" */ '../views/calculator-results/index.vue')
   }
 ]
 

@@ -8,6 +8,13 @@
   height: 0;
   clear: both;
 }
+.clearfix:before {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
 
 /*单行溢出*/
 .one-txt-cut {
@@ -39,6 +46,13 @@
   margin-top: double(30px);
 }
 
+.mg-c-t5 {
+  margin-top: double(10px);
+}
+.mg-c-b5 {
+  margin-bottom: double(10px);
+}
+
 .mg-c-b15 {
   margin-bottom: double(30px);
 }
@@ -48,7 +62,17 @@
   margin-bottom: double(30px);
 }
 
+.mg-c-t15 {
+  margin-top: double(30px);
+}
+
 // 基础通用布局 内边距
+.pd-c-t5 {
+  padding-top: double(10px);
+}
+.pd-c-b5 {
+  padding-bottom: double(10px);
+}
 .pd-c-lr15 {
   padding-left: double(30px);
   padding-right: double(30px);
@@ -57,4 +81,18 @@
 .pd-c-tb15 {
   padding-left: double(30px);
   padding-right: double(30px);
+}
+.pd-c-tb25 {
+  padding-top: double(25px);
+  padding-bottom: double(25px);
+}
+
+.br {
+  border: 1px solid red;
+}
+
+// flex布局
+
+.flex-dir-col {
+  flex-direction: column;
 }

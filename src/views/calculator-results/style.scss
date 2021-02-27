@@ -1,0 +1,193 @@
+@import '~@/styles/modules/mixin.scss';
+
+$layout-w: double(690px);
+
+.calculator-results-page {
+  min-height: 100%;
+  overflow: scroll;
+  .wh-c-690 {
+    width: $layout-w;
+  }
+  .calculator {
+    overflow: hidden;
+    background: #FFFFFF;
+    border-radius: double(10px);
+    .calculator-items {
+      display: flex;
+    }
+    .br-c-b {
+      border-bottom: 1px dashed #BCBCBC;
+    }
+  }
+  .calculator-cell {
+    display: flex;
+  }
+  .calculator-info {
+    display: flex;
+    height: double(40px);
+    line-height: double(40px);
+    align-items: center;
+    .icon {
+      width: double(34px);
+      height: double(34px);
+    }
+    .title {
+      margin-left: double(13px);
+      font-size: double(30px);
+      font-weight: bold;
+    }
+    .tip-icon {
+      margin-left: double(13px);
+      font-size: double(32px);
+    }
+  }
+  .result {
+    flex: 1;
+    font-size: double(34px);
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    .text {
+      color: #FB3F3F;
+    }
+  }
+  .tip-text {
+    width: 100%;
+    height: double(60px);
+    background: #FFF5CF;
+    font-size: double(24px);
+    line-height: double(60px);
+    text-align: center;
+    margin-bottom: double(10px);
+  }
+
+  // 选项卡
+  .tabs {
+    display: flex;
+    padding-top: double(45px);
+    padding-bottom: double(80px); 
+    .tabs-items {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      background-color: #F2F2F2;
+      .tabs-items-icon {
+        width: double(54px);
+        height: double(54px);
+      }
+      .tabs-items-text {
+        position: relative;
+        .text-top {
+          position: absolute;
+          left: 0;
+          top: double(-47px);
+          .icon {
+            width: double(180px);
+            height: double(40px);
+          }
+          span {
+            font-size: double(14px);
+            color: #fff;
+          }
+        }
+        .text {
+          display: flex;
+          justify-content: center;
+          font-size: double(24px);
+          width: double(126px);
+          height: double(50px);
+          line-height: double(50px);
+          font-weight: 400;
+          color: #999999;
+          &.text-br-r {
+            border-right: 1px solid #E3E3E3;
+          }
+        }
+        .text-bottom {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: double(-70px);
+          span {
+            // width: 72px;
+            // height: 43px;
+            text-align: center;
+            font-size: double(18px);
+            font-weight: 400;
+            color: #999999;
+            // line-height: 24px;
+          }
+        }
+      }
+      &.active {
+        background-color: #FF5D5D;
+        .tabs-items-text {
+          .text {
+            color: #FFF5CF;
+          }
+        }
+      }
+    }
+  }
+
+  .chart-container {
+    width: double(630px);
+    height: double(700px);
+    background: url('~@/assets/images/calculator-results/chart-bg.png') no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    .chart-head {
+      padding: double(46px) double(40px) double(60px) double(40px);
+      span {
+        font-size: double(26px);
+      }
+      .money {
+        color: #FB3F3F;
+      }
+    }
+    .chart-body {
+      text-align: center;
+      height: double(240px);
+    }
+    .chart-footer {
+      padding: 0 double(40px);
+      .footer-top {
+        padding-bottom: double(49px);
+        text-align: center;
+        span {
+          font-size: double(12px);
+        }
+      }
+      .form-submit {
+        width: double(550px);
+        height: double(80px);
+        border-radius: double(40px);
+        .btn-text {
+          color: #BF150B;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  // 推荐
+  .recommend-container {
+    width: $layout-w;
+    margin-top: double(30px);
+    .recommend-items {
+      width: 100%;
+    }
+  }
+}
+
+.base-map-bg {
+  background-image: url('~@/assets/images/pension-calculator/base-map-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+

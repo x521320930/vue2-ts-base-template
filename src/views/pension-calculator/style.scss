@@ -1,0 +1,17 @@
+@import '~@/styles/modules/mixin.scss';
+
+.pension-calculator-page {
+  min-height: 100%;
+}
+
+
+.base-map-bg {
+  background-image: url('~@/assets/images/pension-calculator/base-map-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.form-container {
+  padding-top: double(455px);
+}

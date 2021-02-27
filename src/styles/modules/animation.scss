@@ -1,0 +1,28 @@
+// 心跳
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+.pulse {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+// 弹起
+.dialog-bounce-enter {
+  transform: translate3d(-50%, -50%, 0) scale(.7);
+  // opacity: 0
+}
+
+.dialog-bounce-leave-active {
+  transform: translate3d(-50%, -50%, 0) scale(.9);
+  // opacity: 0
+}

@@ -1,0 +1,128 @@
+@charset "utf-8";
+/* 初始化 */
+html,
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  /*谷歌浏览器字体最小字体12px*/
+  -webkit-text-size-adjust: 100%;/*100%/none 关闭字体大小自动调整功能*/
+  /*a标签及拥有 :active伪类的元素有默认的高亮框*/
+  -webkit-tap-hightlight-color: transparent;
+}
+
+body {
+  /*开启moblie网页快速滚动和回弹的效果*/
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 取消链接高亮  */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+ul,
+li,
+ol {
+  list-style-type: none;
+}
+
+strong {
+  font-weight: normal;
+}
+
+a, img {
+  /*阻止长按页面，弹出菜单的方法*/
+  -webkit-touch-callout:none;
+}
+
+input, textarea {
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+}
+
+/* 网页点击完链接去掉下划线 */
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+
+/* 移动端点击a链接出现蓝色背景问题解决 */
+a:link,
+a:active,
+a:visited,
+a:hover {
+  background: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+a, button, img, input, textarea {
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+  outline: none;
+  -webkit-appearance: none;
+}
+
+
+/* 图片自适应 */
+img {
+  width: 100%;
+  height: auto;
+  border: 0;
+  display: block;
+}
+
+/* 禁止缩放表单 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input {
+  resize: none;
+  border: none;
+}

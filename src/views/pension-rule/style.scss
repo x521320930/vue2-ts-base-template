@@ -1,0 +1,157 @@
+@import '~@/styles/modules/mixin.scss';
+
+$layout-w: double(690px);
+
+.pension-rule-page {
+  min-height: 100%;
+  overflow: hidden;
+  .wh-c-690 {
+    width: $layout-w;
+  }
+  .pension-container {
+    margin-top: double(195px);
+    border-radius: double(10px);
+    display: flex;
+    flex-direction: column;
+  }
+  .expansion {
+    padding: double(35px) double(28px);
+    background: #FFFFFF;
+    .expansion-head {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: double(30px);
+      .title {
+        font-size: double(32px);
+        font-weight: bold;
+      }
+      .money {
+        color: #FB3F3F;
+        font-size: double(36px);
+        font-weight: bold;
+      }
+    }
+    .expansion-slider {
+      width: double(630px);
+      height: double(360px);
+      background: #FFF5EA;
+      border: 1px solid #FFC07B;
+      border-radius: double(4px);
+      .slider-head {
+        height: double(34px);
+        font-size: double(26px);
+        padding-top: double(26px);
+        padding-bottom: double(26px);
+        padding-left: double(21px);
+        font-weight: bold;
+        border-bottom: 1px solid #FFC07B;
+      }
+    }
+    .expansion-select {
+      display: flex;
+      flex-direction: column;
+      .head {
+        padding: double(40px) 0;
+        font-size: double(26px);
+        font-weight: bold;
+      }
+      .select {
+        display: flex;
+        justify-content: space-between;
+        .select-left, .select-right {
+          width: double(260px);
+          height: double(160px);
+          background: url('~@/assets/images/pension-rule/select.png') no-repeat top;
+          background-size: contain;
+          position: relative;
+          .select-title {
+            line-height: double(60px);
+            text-align: center;
+            color: #FFFFFF;
+            font-size: double(32px);
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+          }
+          .select-content {
+            padding-top: double(28px);
+            position: relative;
+            text-align: center;
+            span {
+              color: #FB3F3F;
+              font-size: double(38px);
+              font-weight: bold;
+            }
+            .text-icon {
+              margin-left: double(22px);
+              font-size: double(35px);
+              position: absolute;
+              right: double(40px);
+              top: double(38px)
+            }
+          }
+        }
+        .select-center {
+          display: flex;
+          align-items: center;
+          .add {
+            width: double(40px);
+            height: double(40px);
+          }
+        }
+      }
+    }
+
+    .expansion-desc {
+      .money {
+        color: #FB3F3F;
+        font-size: double(38px);
+        font-weight: bold;
+      }
+      .title {
+        padding-top: double(29px);
+        padding-bottom: double(29px);
+        .text {
+          font-size: double(26px);
+          font-weight: 400;
+        }
+      }
+      .desc {
+        span {
+          font-size: double(19px);
+          color: #999999;
+        }
+      }
+    }
+    
+  }
+  .btn-box {
+    margin-bottom: double(20px);
+    .btn {
+      width: 100%;
+      height: double(100px);
+    }
+    .btn-text {
+      font-size: double(36px);
+      font-weight: bold;
+      color: #ffffff
+    }
+  }
+  // 推荐
+  .recommend-container {
+    width: $layout-w;
+    margin-top: double(30px);
+    .recommend-items {
+      width: 100%;
+    }
+  }
+}
+
+.base-map-bg {
+  background-image: url('~@/assets/images/pension-rule/base-map-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+

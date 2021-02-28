@@ -20,6 +20,12 @@ const routes: Array<RouteConfig> = [
     name: '计算结果',
     meta: { title: '计算结果', isTitle: true },
     component: () => import(/* webpackChunkName: "calculator-results" */ '../views/calculator-results/index.vue')
+  },
+  {
+    path: '/pension-rule',
+    name: '养老规则',
+    meta: { title: '养老规则', isTitle: true },
+    component: () => import(/* webpackChunkName: "pension-rule" */ '../views/pension-rule/index.vue')
   }
 ]
 

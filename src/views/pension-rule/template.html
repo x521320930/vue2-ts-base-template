@@ -7,12 +7,29 @@
 			</div>
 			<div class="expansion-slider">
 				<div class="slider-head">您的养老理财产品希望每年可以获得：</div>
-				<div class="slider-body"></div>
+				<div class="slider-body">
+					<div class="slider-title">{{ sliderValue }}%</div>
+					<div class="scale" ref="slider">
+						<div class="scale-items"
+							v-for="(item, i) in sliderItems"
+							:key="i">
+							<div class="line" :class="{ main: item.isMain }"></div>
+							<div v-if="item.isMain" class="scale-text">{{item.text}}</div>
+						</div>
+						<div class="slider-btn">
+							<van-slider class="h" v-model="sliderValue" max="20" min="1">
+								<template slot="button"> 
+									<img class="icon" src="~@/assets/images/pension-rule/slider-btn.png"/>
+								</template>
+							</van-slider>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="expansion-select">
 				<div class="head">按以上收益率，理财规划建议如下：</div>
 				<div class="select">
-					<div class="select-left  ">
+					<div class="select-left">
 						<div class="select-title">首笔投资</div>
 						<div class="select-content" @click="hanldeOpenPicker">
 							<span>12万</span>
@@ -45,6 +62,7 @@
 		</div>
 		<div class="btn-box">
 			<van-button
+					@click="handleSubmit"
 					color="linear-gradient(0deg, #F88303, #FEBB4C)"
 					class="btn"
 					>

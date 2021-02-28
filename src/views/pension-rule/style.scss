@@ -46,6 +46,74 @@ $layout-w: double(690px);
         font-weight: bold;
         border-bottom: 1px solid #FFC07B;
       }
+      .slider-body {
+        padding: 0 double(55px);
+        display: flex;
+        flex-direction: column;
+        .slider-title {
+          padding-top: double(42px);
+          color: #FB3F3F;
+          font-weight: bold;
+          font-size: double(42px);
+          text-align: center;
+        }
+        .scale {
+          display: flex;
+          margin-top: double(50px);
+          border-bottom: 1px solid #D0D0D0;
+          position: relative;
+          .scale-items {
+            position: relative;
+            width: double(26px);
+            display: flex;
+            justify-content: center;
+          }
+          .line {
+            height: double(40px);
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              width: double(2px);
+              height: double(29px);
+              background: #D0D0D0;
+              left: 0;
+              bottom: 0;
+            }
+          }
+          .main {
+            &::before {
+              height: double(44px);
+            }
+          }
+          .slider-btn {
+            position: absolute;
+            z-index: 100;
+            left: double(12px);
+            right: double(13px);
+            bottom: double(0px);
+            .h {
+              height: double(40px);
+              background: transparent;
+              .van-slider__bar {
+                background: transparent;
+              }
+            }
+            .icon {
+              margin-top: double(-35px);
+              width: double(20px);
+              height: double(90px);
+            }
+          }
+          .scale-text {
+            position: absolute;
+            bottom: double(-45px);
+            font-size: double(24px);
+            color: #666666;
+          }
+        }
+        
+      }
     }
     .expansion-select {
       display: flex;

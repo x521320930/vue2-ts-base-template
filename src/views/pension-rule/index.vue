@@ -3,14 +3,15 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { Button, Icon, Picker } from 'vant'
+import { Button, Icon, Slider } from 'vant'
+import { SCALE_VALUE } from '@/const/index'
 import VPicker from '@/components/Picker/index.vue'
 @Component({
   name: 'PensionRule',
   components: {
     [Button.name]: Button,
     [Icon.name]: Icon,
-    [Picker.name]: Picker,
+    [Slider.name]: Slider,
     VPicker
   }
 })
@@ -18,9 +19,11 @@ export default class PensionRule extends Vue {
   // 提示弹框
   public isPicker = false
   public pickerColnums = ['2', '12', '6']
-
+  // 刻度数据
+  public sliderItems = SCALE_VALUE
   public queryData = this.$route.query
   public picktext = '2'
+  public sliderValue = 10
 
   // 首笔投资开启弹窗
   public hanldeOpenPicker () {
@@ -38,12 +41,23 @@ export default class PensionRule extends Vue {
   public hanldePickerCancel (val: boolean) {
     this.isPicker = val
   }
+
+  // 提交
+  public handleSubmit () {
+    this.$toast('功能还未开放')
+  }
+
+  mounted () {
+    console.log(1)
+  }
 }
 </script>
 <style lang="scss">
-.pension-calculator-page {
-  .van-cell {
-    padding: 0;
+.pension-rule-page {
+  .h {
+    .van-slider__bar {
+      background: transparent;
+    }
   }
 }
 </style>

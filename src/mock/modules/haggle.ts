@@ -72,3 +72,22 @@ export const pensionCalculator = () => {
     template: params
   }
 }
+
+// 开始规划
+export const pensionStartPlan = () => {
+  const url = '/pension/startPlan'
+  const type = 'post'
+  const params = {
+    code: '200',
+    data: {
+      jllxshhc: '100',
+      mydt: '100'
+    },
+    msg: '成功'
+  }
+  return {
+    url,
+    type,
+    template: params
+  }
+}

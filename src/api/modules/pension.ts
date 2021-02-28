@@ -20,3 +20,8 @@ export const pensionCity = (params: Params) => {
 export const pensionCalculator = (params: Params) => {
   return Axios.post('/pension/startCalcu', params)
 }
+
+// 开始规划
+export const pensionStartPlan = (params: Params) => {
+  return Axios.post('/pension/startPlan', params)
+}

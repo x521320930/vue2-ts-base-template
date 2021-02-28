@@ -21,11 +21,24 @@ export default class CalculatorResults extends Vue {
   public dialogText = ''
   public isCityPicker = false
 
+  public queryData = this.$route.query
   // 提交表单
   public hanldeSubmit () {
-    this.$router.push({
-      path: 'pension-rule'
-    })
+    this.$api.pensionStartPlan(this.queryData).then((res: any) => {
+      const { code, data, msg } = res
+      if (code === '200') {
+        this.$router.push({
+          path: 'pension-rule',
+          query: { ...data }
+        })
+      } else {
+        this.$toast(msg)
+      }
+    }).catch((r: any) => console.log(r))
+  }
+
+  mounted () {
+    console.log(this.queryData)
   }
 }
 </script>

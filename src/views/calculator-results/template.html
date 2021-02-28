@@ -1,6 +1,6 @@
 <div class="calculator-results-page base-map-bg ">
 	<div class="wh-c-690 mg-c-lrauto calculator mg-c-t15 ">
-		<div class="calculator-items pd-c-b5 flex-dir-col pd-c-t5 br-c-b">
+		<div class="calculator-items flex-dir-col pd-c-b5 pd-c-t5 br-c-b">
 			<div class="calculator-cell mg-c-lr15 pd-c-tb25">
 				<div class="calculator-info">
 					<div class="icon">
@@ -9,10 +9,10 @@
 					<div class="title"><span>预计退休前月工资</span></div>
 					<van-icon name="question" color="#B0B0B0" class="tip-icon"/>
 				</div>
-				<div class="result"><span class="text">89,999,96元</span></div>
+				<div class="result"><span class="text">{{ queryData.yjtxqygz }}元</span></div>
 			</div>
 		</div>
-		<div class="calculator-items br-c-b flex-dir-col pd-c-b5 pd-c-t5">
+		<div class="calculator-items flex-dir-col pd-c-b5 pd-c-t5 br-c-b">
 			<div class="calculator-cell mg-c-lr15 pd-c-tb25">
 				<div class="calculator-info">
 					<div class="icon">
@@ -21,7 +21,7 @@
 					<div class="title"><span>退休后每月养老金</span></div>
 					<van-icon name="question" color="#B0B0B0" class="tip-icon"/>
 				</div>
-				<div class="result"><span class="text">89,999,96元</span></div>
+				<div class="result"><span class="text">{{ queryData.txhmyylj }}元</span></div>
 			</div>
 			<div class="calculator-cell">
 				<span class="tip-text">剔除物价上涨的影响，每月养老金相当于现在的14952.38元</span>
@@ -36,7 +36,7 @@
 					<div class="title"><span>养老保障指数</span></div>
 					<van-icon name="question" color="#B0B0B0" class="tip-icon"/>
 				</div>
-				<div class="result"><span class="text">90%</span></div>
+				<div class="result"><span class="text">{{ queryData.ylbzzs }}%</span></div>
 			</div>
 		</div>
 		<div class="calculator-items flex-dir-col">
@@ -96,8 +96,8 @@
 		<div class="calculator-items flex-dir-col pd-c-b5 pd-c-t5">
 			<div class="chart-container">
 				<div class="chart-head">
-					<span>根据计算，您的退休每月养老金与80%以上养老保障指数相差
-						<span class="money">39495.08</span> 元，无法实现美滋滋的幸福生活。
+					<span>根据计算，您的退休每月养老金与{{ queryData.ylbzzs }}%以上养老保障指数相差
+						<span class="money">{{ queryData.ylbzzsxc }}</span> 元，无法实现美滋滋的幸福生活。
 					</span>
 				</div>
 				<div class="chart-body">

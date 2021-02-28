@@ -3,7 +3,7 @@
 		<div class="expansion">
 			<div class="expansion-head">
 				<div class="title">距离您的理想生活还差 :</div>
-				<div class="money">548.98万</div>
+				<div class="money">{{ queryData.jllxshhc }}万</div>
 			</div>
 			<div class="expansion-slider">
 				<div class="slider-head">您的养老理财产品希望每年可以获得：</div>
@@ -14,7 +14,7 @@
 				<div class="select">
 					<div class="select-left  ">
 						<div class="select-title">首笔投资</div>
-						<div class="select-content">
+						<div class="select-content" @click="hanldeOpenPicker">
 							<span>12万</span>
 							<van-icon class="text-icon" name="arrow-down" color="#FB3F3F"/>
 						</div>
@@ -27,7 +27,7 @@
 					<div class="select-right ">
 						<div class="select-title">每月定投</div>
 						<div class="select-content">
-							<span>12万</span>
+							<span>{{ queryData.mydt }}万</span>
 						</div>
 					</div>
 				</div>
@@ -58,4 +58,12 @@
 			</div>
 		</div>
 	</div>
+	<!-- 选择 -->
+	<VPicker
+		:isShow="isPicker"
+		:columns="pickerColnums"
+		title="请选择首笔投资"
+		@cancel="hanldePickerCancel"
+		@confirm="hanldePickerConfirm"
+		/>
 </div>

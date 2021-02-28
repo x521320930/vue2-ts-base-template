@@ -20,6 +20,13 @@ export default class CalculatorResults extends Vue {
   public dialogTitle = ''
   public dialogText = ''
   public isCityPicker = false
+
+  // 提交表单
+  public hanldeSubmit () {
+    this.$router.push({
+      path: 'pension-rule'
+    })
+  }
 }
 </script>
 <style lang="scss">

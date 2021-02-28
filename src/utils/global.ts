@@ -4,7 +4,6 @@
  */
 import $api from '@/api'
 import { VueConstructor } from 'vue/types/vue'
-
 const install = function (Vue: VueConstructor) {
   Vue.prototype.$api = $api
 }

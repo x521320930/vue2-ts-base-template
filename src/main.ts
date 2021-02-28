@@ -5,6 +5,10 @@ import VueGlobal from '@/utils/global'
 import { Toast, Dialog, Popup } from 'vant'
 import '@/styles/index.scss'
 
+import Mock from '@/mock/index'
+
+Mock()
+
 Vue.config.productionTip = false
 
 Toast.setDefaultOptions({ position: 'bottom' })

@@ -2,20 +2,18 @@
 	<!-- 表单 -->
 	<div class="form-container mg-c-lrauto">
 		<div class="tabs">
-			<div class="tabs-items active">
+			<div
+				v-for="(item) in tabs"
+				class="tabs-items"
+				:key="item.id"
+				:class="{ active: tabActive === item.id }"
+				@click="hanldeTabsClick(item)">
 				<div class="tabs-items-icon">
-					<img src="~@/assets/images/pension-calculator/man-00.png">
+					<img v-if="tabActive !== item.id" :src="item.icon">
+					<img v-else :src="item.activeIcon">
 				</div>
 				<div class="tabs-items-text">
-					<span class="text">男</span>
-				</div>
-			</div>
-			<div class="tabs-items">
-				<div class="tabs-items-icon">
-					<img src="~@/assets/images/pension-calculator/female-00.png">
-				</div>
-				<div class="tabs-items-text">
-					<span class="text">女</span>
+					<span class="text">{{ item.name }}</span>
 				</div>
 			</div>
 		</div>
@@ -25,8 +23,11 @@
 				<div class="form-items-col">
 					<div class="form-items-label"><span>出生月份</span></div>
 					<div class="form-items-body">
-						<div class="form-items-input">
-							<input type="text" readonly placeholder="ni">
+						<div class="form-items-input" @click="hanldeOpenYearBirth">
+							<input
+								type="text"
+								v-model="transmitValue.birthYear"
+								readonly placeholder="出生月份">
 							<div class="select">
 								<van-icon name="arrow-down" color="#C0C0C0"/>
 							</div>
@@ -39,8 +40,10 @@
 						<van-icon @click="hanldeOpenDialog(0)" name="question" color="#B0B0B0" class="icon"/>	
 					</div>
 					<div class="form-items-body">
-						<div class="form-items-input">
-							<input type="text" readonly placeholder="ni">
+						<div class="form-items-input" @click="hanldeOpenWordYear">
+							<input type="text"
+								v-model="transmitValue.workYear"
+								readonly placeholder="参加工作年份">
 							<div class="select">
 								<van-icon name="arrow-down" color="#C0C0C0"/>
 							</div>
@@ -53,7 +56,11 @@
 					<div class="form-items-label"><span>当前月工资 (元)</span></div>
 					<div class="form-items-body">
 						<div class="form-items-input">
-							<input type="text" placeholder="1000≦金额≦1000000">
+							<input type="text"
+							minlength="1"
+							maxlength="7"
+							v-model="transmitValue.monthSalary"
+							placeholder="1000≦金额≦1000000">
 						</div>
 					</div>
 				</div>
@@ -61,7 +68,9 @@
 					<div class="form-items-label"><span>所在省 (直辖市)</span></div>
 					<div class="form-items-body">
 						<div class="form-items-input" @click="hanldeOpenCityPicker">
-							<input type="text" readonly placeholder="ni">
+							<input type="text"
+								v-model="transmitValue.province"
+								readonly placeholder="所在省 (直辖市)">
 							<div class="select">
 								<van-icon name="arrow-down" color="#C0C0C0"/>
 							</div>
@@ -71,6 +80,7 @@
 			</div>
 			<div class="form-items mg-c-tb15 form-items-jc-cr">
 				<van-button
+					@click="hanldeSubmit"
 					color="linear-gradient(180deg, #FFE2AF 0%, #FF9849 100%)"
 					class="form-submit"
 					>
@@ -95,10 +105,28 @@
 		:title="dialogTitle"
 		@cancel="hanldeDialogCancel"
 		:text="dialogText"/>
+	
+	<!-- 出生月份 -->
+	<VPicker
+		:isShow="isYearBirth"
+		:columns="yearBirthColumns"
+		title="请选择出生日期"
+		@cancel="hanldeYearBirthCancel"
+		@confirm="hanldeYearBirthConfirm"
+		/>
+
+	<!-- 工作年份 -->
+	<VPicker
+		:isShow="isWordYear"
+		:columns="wordYearColumns"
+		title="请选择工作年份"
+		@cancel="hanldeWordYearCancel"
+		@confirm="hanldeWordYearConfirm"
+		/>
 	<!-- 城市 -->
 	<VPicker
 		:isShow="isCityPicker"
-		:columns="columns"
+		:columns="cityPickerColumns"
 		title="请选择所在省"
 		@cancel="hanldeCityPickerCancel"
 		@confirm="hanldeCityPickerConfirm"

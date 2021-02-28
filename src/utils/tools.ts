@@ -13,35 +13,6 @@ export function formTree (nodes: Array<any>, id: any, link: number | string): Ar
     .map((item) => ({ ...item, children: formTree(item, item.id, link) }))
 }
 
-const deviceCore = {
-  _ua: navigator.userAgent,
-  _detect: (kernel: string) => {
-    const reg = new RegExp(kernel, 'img')
-    return reg.test(deviceCore._ua)
-  }
-}
-
-/**
- * @describe 判断设备类型
- */
-export const device = {
-  isIOS: () => {
-    return deviceCore._detect('iPhone|iPad|iPod|iOS|mac os')
-  },
-  isAndroid: () => {
-    return deviceCore._detect('Android')
-  },
-  isWeixin: () => {
-    return deviceCore._detect('MicroMessenger')
-  },
-  isUCBrowser: () => {
-    return deviceCore._detect('UCBrowser')
-  },
-  isQQBrowser: () => {
-    return deviceCore._detect('QQBrowser')
-  }
-}
-
 /**
  * @describe TS需要用索引操作符 才能进行 data[key]
  */

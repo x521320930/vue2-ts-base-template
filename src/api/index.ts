@@ -3,8 +3,8 @@
  * @describe 接口入口
  */
 
-import * as wx from './modules/wx'
+import * as pension from './modules/pension'
 
 export default {
-  ...wx
+  ...pension
 }

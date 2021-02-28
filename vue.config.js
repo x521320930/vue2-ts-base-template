@@ -15,16 +15,16 @@ module.exports = {
       warnings: true,
       errors: true
     },
-    proxy: {
-      '/dev-api': {
-        target: `http://10.159.41.11:49000`,
-        changeOrigin: true,
-        ws: true,
-        pathRewrite: {
-          '^/dev-api': ''
-        }
-      }
-    }
+    // proxy: {
+    //   '/dev-api': {
+    //     target: `http://10.159.41.11:49000`,
+    //     changeOrigin: true,
+    //     ws: true,
+    //     pathRewrite: {
+    //       '^/dev-api': ''
+    //     }
+    //   }
+    // }
   },
   chainWebpack: (config) => {
     

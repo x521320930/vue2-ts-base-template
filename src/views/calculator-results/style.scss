@@ -149,7 +149,8 @@ $layout-w: double(690px);
       }
     }
     .chart-body {
-      text-align: center;
+      margin-left: double(20px);
+      margin-right: double(20px);
       height: double(240px);
     }
     .chart-footer {

@@ -1,0 +1,225 @@
+.info-page-container {
+  min-height: 100vh;
+  background: #0000003b;
+  font-family: "PingFang SC";
+  padding-bottom: 50px;
+  .pd-l {
+    padding-left: 23px;
+  }
+  .pd-l-1 {
+    padding-left: 16px;
+  }
+
+  .pd-r {
+    padding-right: 23px;
+  }
+  .pd-r-1 {
+    padding-right: 16px;
+  }
+  .layout-w-mg {
+    width: 343px;
+    margin: 17px auto 0;
+  }
+  .mr-b {
+    margin-bottom: 16px;
+  }
+  .layout-bg-r {
+    background: rgba(252, 253, 255, 0.97);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+  }
+  .ins-information-container {
+    
+  }
+  .ins-so-box {
+    
+  }
+  .ins-student-box {
+    // height: 243px;
+    background: url('../../assets/images/ins_info_bg.png') no-repeat;
+    background-size: contain;
+    background-position: top center;
+    display: flex;
+    flex-direction: column;
+    .student-head {
+      margin-top: 61px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      color: #FFFFFF;
+    }
+    .student-body {
+      
+      .c {
+        display: flex;
+        align-items: center;
+      }
+      .text {
+        font-size: 12px;
+        line-height: 18px;
+        color: #F5F7F9;
+      }
+      .text-dir {
+        width: 10px;
+        height: 0px;
+        margin: 0 4px;
+        border-top: 1px solid #dfe2e6;
+        transform: rotate(90deg);
+      }
+    }
+    .student-footer {
+      margin-top: 15px;
+      .ins-st-ct-box {
+        height: 153px;
+        background: rgba(252, 253, 255, 0.97);
+        backdrop-filter: blur(4px);
+        border-radius: 12px;
+        .st-ct-body {
+          display: flex;
+          justify-content: space-between;
+          .items {
+            display: flex;
+            width: 96px;
+            height: 76px;
+            background: #FFFFFF;
+            border-radius: 8px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .num {
+              font-family: Arial;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 24px;
+              line-height: 28px;
+              color: #303858;
+              margin-bottom: 4px;
+            }
+            .text {
+              font-size: 12px;
+              line-height: 16px;
+              color: #505873;
+            }
+          }
+        }
+      }
+    }
+  }
+  // 综合运营数据
+  .ins-operation-box {
+    .operation-body {
+      padding-bottom: 21px;
+    }
+    .items {
+      display: flex;
+      justify-content: space-between;
+    }
+    .box-item {
+      width: 98.33px;
+      height: 100px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #FFFFFF;
+      .title {
+        font-size: 12px;
+        line-height: 18px;
+        color: #505873;
+        margin-top: 13px;
+        margin-bottom: 19px;
+      }
+      .num {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 16px;
+        color: #303858;
+      }
+      .dir {
+        font-size: 12px;
+        color: #303858;
+        &.gray {
+          color: #A9B4C3;
+        }
+      }
+
+      &.blue, &.green, &.red {
+        .title, .num ,.dir {
+          color: #FFFFFF;
+        }
+        .dir {
+          .gray {
+            color: #FFFFFF;
+          }
+        }
+      }
+      &.blue {
+        background: #2D68FF;
+      }
+      &.green {
+        background: #00BE7B;
+      }
+      &.red {
+        background: #FF6C40;
+      }
+    }
+  }
+  .ins-sales-box {
+  }
+  .ins-service-box {
+    padding-bottom: 22px;
+    .service-body {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px dashed #EBEDF0;
+      .info-box {
+        width: 311px;
+        height: 65px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .info-item {
+          width: 77.75px;
+          height: 52px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .title {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 18px;
+            color: #98A2B2;
+            margin: 4px 0px;
+          }
+          .num {
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 22px;
+            color: #303858;
+          }
+          .dir {
+            font-size: 12px;
+            color: #303858;
+          }
+          &.br-r {
+            box-sizing: border-box;
+            border-right: 1px dashed #EBEDF0;
+          }
+          &:nth-child(1) {
+            align-items: flex-start;
+          }
+        }
+      }
+    }
+    .service-footer {
+      padding-top: 15px;
+    }
+  }
+}

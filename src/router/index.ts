@@ -10,6 +10,12 @@ Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
+    path: '/',
+    name: '机构信息',
+    meta: { title: '机构信息', isTitle: true },
+    component: () => import(/* webpackChunkName: "pension-calculator" */ '../views/info/index.vue')
+  },
+  {
     path: '/pension-calculator',
     name: '养老金计算器',
     meta: { title: '养老金计算器', isTitle: true },

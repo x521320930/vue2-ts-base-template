@@ -23,6 +23,9 @@
   .mr-b {
     margin-bottom: 16px;
   }
+  .mr-r {
+    margin-right: 12px;
+  }
   .layout-bg-r {
     background: rgba(252, 253, 255, 0.97);
     border-radius: 12px;
@@ -167,6 +170,7 @@
     }
   }
   .ins-sales-box {
+    height: 330px;
   }
   .ins-service-box {
     padding-bottom: 22px;
@@ -220,6 +224,62 @@
     }
     .service-footer {
       padding-top: 15px;
+      // <!-- 使用标题 -->
+      .top-box {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        .title {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 21px;
+          color: #70788C;
+        }
+        .tip {
+          display: flex;
+          align-items: center;
+          .tip-item {
+            width: 57.5px;
+            font-size: 12px;
+            line-height: 18px;
+            color: #70788C;
+            display: flex;
+            align-items: center;
+            .dot {
+              width: 4px;
+              height: 4px;
+              border-radius: 2px;
+              background: #98A2B2;
+              margin-right: 8px;
+              &.red {
+                background: #FF6C40;
+              }
+            }
+          }
+        }
+      }
+     
+      .bottom-box {
+        display: flex;
+        flex-wrap: wrap;
+        .use-item {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 21px;
+          padding: 0 10px;
+          border-radius: 33px;
+          margin-right: 4px;
+          margin-bottom: 12px;
+          background: #F5F7F9;
+          color: #98A2B2;
+          &.un {
+            color: #FF6C40;
+            background: rgba(255, 176, 152, 0.2);
+          }
+        }
+      }
     }
   }
 }

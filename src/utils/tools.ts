@@ -7,10 +7,14 @@ import { IsValidInterface } from '@/interface/global'
 /**
  * @describe 生成具体树形结构的对象
  */
-export function formTree (nodes: Array<any>, id: any, link: number | string): Array<any> {
+export function formTree (
+  nodes: Array<any>,
+  id: any,
+  link: number | string
+): Array<any> {
   return nodes
-    .filter((item) => item[link] === id)
-    .map((item) => ({ ...item, children: formTree(item, item.id, link) }))
+    .filter(item => item[link] === id)
+    .map(item => ({ ...item, children: formTree(item, item.id, link) }))
 }
 
 const deviceCore = {
@@ -54,5 +58,21 @@ export const isValidKey: IsValidInterface = (data, key) => {
  * @param {*} property
  */
 export function isEmpty (property: any) {
-  return property === null || property === '' || typeof property === 'undefined'
+  return (
+    property === null || property === '' || typeof property === 'undefined'
+  )
+}
+
+/**
+ * @description 千分符
+ */
+export function thousandsSeparator (num: number): string {
+  return (num + '').replace(/(\d{1,3})(?=(\d{3})+(?:$|\.))/g, '$1,')
+}
+
+/**
+ * @description 转换K符
+ */
+export function numberFormatterK (num: number, digits: number): string {
+  return (num / 1E3).toFixed(digits).replace(/\.0+$|(\.[0-9]*[1-9])0+$/, '$1') + 'K'
 }
